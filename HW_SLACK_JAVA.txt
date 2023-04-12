@@ -1,0 +1,177 @@
+Assignment#1:
+
+Using For Loop:
+
+ODD:
+
+int sum = 0;
+for (int i = 1; i <= 100; i += 2) {
+  sum += i;
+}
+System.out.println("Sum of odd numbers between 0 and 100 using for loop: " + sum);
+
+---------------
+EVEN:
+
+int sum = 0;
+for (int i = 0; i <= 100; i += 2) {
+  sum += i;
+}
+System.out.println("Sum of even numbers between 0 and 100 using for loop: " + sum);
+
+----------------
+DIVIDABLE BY 7:
+
+int sum = 0;
+for (int i = 0; i <= 100; i++) {
+  if (i % 7 == 0) {
+    sum += i;
+  }
+}
+System.out.println("Sum of numbers that are divisible by 7 between 0 and 100 using for loop: " + sum); 
+
+
+-----------------------------------------------------------------------------------------
+
+Using While Loop:
+
+ODD:
+
+int sum = 0;
+int i = 1;
+while (i <= 100) {
+  sum += i;
+  i += 2;
+}
+System.out.println("Sum of odd numbers between 0 and 100 using while loop: " + sum);
+
+---------------
+EVEN:
+
+int sum = 0;
+int i = 0;
+while (i <= 100) {
+  sum += i;
+  i += 2;
+}
+System.out.println("Sum of even numbers between 0 and 100 using while loop: " + sum);
+
+----------------
+DIVIDABLE BY 7:
+
+int sum = 0;
+int i = 0;
+while (i <= 100) {
+  if (i % 7 == 0) {
+    sum += i;
+  }
+  i++;
+}
+System.out.println("Sum of numbers that are divisible by 7 between 0 and 100 using while loop: " + sum);
+ 
+
+-------------------------------------------------------------------------------------------
+
+Using Do-While Loop:
+
+ODD:
+
+int sum = 0;
+int i = 1;
+do {
+  sum += i;
+  i += 2;
+} while (i <= 100);
+System.out.println("Sum of odd numbers between 0 and 100 using do-while loop: " + sum);
+
+----------------
+EVEN:
+
+int sum = 0;
+int i = 0;
+do {
+  sum += i;
+  i += 2;
+} while (i <= 100);
+System.out.println("Sum of even numbers between 0 and 100 using do-while loop: " + sum);
+
+----------------
+DIVIDABLE BY 7:
+
+int sum = 0;
+int i = 0;
+do {
+  if (i % 7 == 0) {
+    sum += i;
+  }
+  i++;
+} while (i <= 100);
+System.out.println("Sum of numbers that are divisible by 7 between 0 and 100 using do-while loop: " + sum);
+ 
+
+********************************************************************************************************
+
+#There is another method (to get even and odd numbers) by using if statment in side the loop to ask if the number is odd or even ( if(i%2==0)/ if(i%2!=0)), but it will take more time.
+
+
+********************************************************************************************************
+
+Assignment#2:using recursion
+
+
+ODD:
+
+public static int sumOddNumbers(int n) {
+    if (n == 0) {
+        return 0;
+    } else if (n % 2 != 0) {
+        return n + sumOddNumbers(n - 1);
+    } else {
+        return sumOddNumbers(n - 1);
+    }
+}
+
+
+int sum = sumOddNumbers(100);
+System.out.println("Sum of odd numbers between 0 and 100 using recursion: " + sum);
+
+
+--------------------------------------------------------------------------------------------
+
+EVEN:
+
+public static int sumEvenNumbers(int n) {
+    if (n == 0) {
+        return 0;
+    } else if (n % 2 == 0) {
+        return n + sumEvenNumbers(n - 2);
+    } else {
+        return sumEvenNumbers(n - 1);
+    }
+}
+
+
+int sum = sumEvenNumbers(100);
+System.out.println("Sum of even numbers between 0 and 100 using recursion: " + sum);
+
+
+---------------------------------------------------------------------------------------------
+
+DIVIDABLE BY 7:
+
+public static int sumDivisibleBySeven(int n) {
+    if (n == 0) {
+        return 0;
+    } else if (n % 7 == 0) {
+        return n + sumDivisibleBySeven(n - 1);
+    } else {
+        return sumDivisibleBySeven(n - 1);
+    }
+}
+
+
+int sum = sumDivisibleBySeven(100);
+System.out.println("Sum of numbers that are divisible by 7 between 0 and 100 using recursion: " + sum);
+
+
+
